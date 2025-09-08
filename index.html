@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpyWords — Support & Privacy</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="SpyWords support, contact, and privacy policy." />
+  <meta property="og:title" content="SpyWords — Support & Privacy" />
+  <meta property="og:description" content="Get help with SpyWords and read our privacy policy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/spywords" />
+  <meta property="og:image" content="https://your-domain.example/spywords/social-cover.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- App icons (optional) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #60a5fa;
+      --border: #1f2937;
+      --focus: #93c5fd;
+      --ok: #34d399;
+      --warn: #fbbf24;
+    }
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --brand: #2563eb;
+        --border: #e5e7eb;
+        --focus: #93c5fd;
+        --ok: #059669;
+        --warn: #d97706;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(96,165,250,0.12), transparent 60%),
+                  radial-gradient(1000px 600px at -10% 10%, rgba(52,211,153,0.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .logo {
+      height: 42px; width: 42px; border-radius: 12px;
+      background: linear-gradient(135deg, #60a5fa, #34d399);
+      display: grid; place-items: center; color: white; font-weight: 800;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    h1 {
+      font-size: clamp(22px, 2.6vw, 32px);
+      margin: 0;
+      letter-spacing: 0.2px;
+    }
+    .subtle { color: var(--muted); font-size: 0.98rem; }
+    nav {
+      display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border: 1px solid var(--border);
+      border-radius: 999px; background: color-mix(in oklab, var(--card), transparent 10%);
+      font-size: 0.92rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: color-mix(in oklab, var(--card), transparent 0%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .card h2 {
+      margin: 0 0 10px; font-size: 1.2rem; letter-spacing: 0.2px;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--card), transparent 0%), color-mix(in oklab, var(--card), black 8%));
+      color: var(--text); font-weight: 600; cursor: pointer;
+      transition: transform .08s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 20px rgba(0,0,0,0.18); text-decoration: none; }
+    .btn.primary { border-color: color-mix(in oklab, var(--brand), black 18%); }
+    .btn.ok { border-color: color-mix(in oklab, var(--ok), black 18%); }
+    .btn.warn { border-color: color-mix(in oklab, var(--warn), black 18%); }
+    .kicker { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12rem; color: var(--muted); }
+    .list { margin: 8px 0 0 0; padding-left: 18px; }
+    .divider { height: 1px; background: var(--border); margin: 28px 0; }
+    footer {
+      margin-top: 32px; padding-top: 20px; color: var(--muted); font-size: 0.92rem;
+    }
+    .policy h2 { margin-top: 0; }
+    .policy h3 { margin: 22px 0 8px; font-size: 1.05rem; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    /* Focus ring */
+    :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 8px; }
+    /* Print-friendly */
+    @media print {
+      nav, .chip, .cta-row, .divider { display:none !important; }
+      body { background: #fff; color: #000; }
+      .card { border-color: #ddd; box-shadow: none; }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MobileApplication",
+    "name":"SpyWords",
+    "applicationCategory":"GameApplication",
+    "operatingSystem":"iOS",
+    "url":"https://your-domain.example/spywords",
+    "author":{"@type":"Organization","name":"SpyWords"},
+    "publisher":{"@type":"Organization","name":"SpyWords"},
+    "inLanguage":"en",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "privacyPolicy":"https://your-domain.example/spywords#privacy",
+    "support":"https://your-domain.example/spywords#support"
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header aria-label="SpyWords header">
+      <div class="logo" aria-hidden="true">S</div>
+      <div>
+        <h1>SpyWords — Support & Privacy</h1>
+        <div class="subtle">Help, contact, and privacy information for the SpyWords app.</div>
+      </div>
+    </header>
+
+    <nav aria-label="Page sections">
+      <a class="chip" href="#support">Support</a>
+      <a class="chip" href="#faq">FAQ</a>
+      <a class="chip" href="#privacy">Privacy Policy</a>
+      <a class="chip" href="#contact">Contact</a>
+    </nav>
+
+    <section id="support" class="card" aria-labelledby="support-title">
+      <h2 id="support-title">Support</h2>
+      <p>If you’re experiencing an issue with SpyWords, please try these steps first:</p>
+      <ol class="list">
+        <li>Ensure you’re on the latest version of the app.</li>
+        <li>Force close and relaunch the app.</li>
+        <li>Check your internet connection for multiplayer features.</li>
+      </ol>
+      <div class="cta-row" role="group" aria-label="Support actions">
+        <a class="btn primary" href="mailto:infoappwide@gmail.com?subject=SpyWords%20Support%20Request&body=Describe%20the%20issue%20you%20are%20seeing%20and%20your%20device%20(model%2C%20iOS%20version).">Email Support</a>
+        <a class="btn" href="#privacy">Read Privacy Policy</a>
+      </div>
+    </section>
+
+    <div class="grid" style="margin-top:16px">
+      <section id="faq" class="card" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <p class="kicker">Quick answers</p>
+        <details>
+          <summary><strong>What data does SpyWords collect?</strong></summary>
+          <p>Only a device identifier for gameplay identity and anonymous gameplay activity to improve the app.</p>
+        </details>
+        <details>
+          <summary><strong>Do you use ads or analytics?</strong></summary>
+          <p>No, not at this time. If that changes, we will update the policy below and the app will reflect it.</p>
+        </details>
+        <details>
+          <summary><strong>How do I delete my data?</strong></summary>
+          <p>SpyWords does not store personally identifiable information. If you have a specific request, contact us at <a href="mailto:infoappwide@gmail.com">infoappwide@gmail.com</a>.</p>
+        </details>
+      </section>
+
+      <section id="contact" class="card" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>Questions or concerns? We’re here to help.</p>
+        <ul class="list">
+          <li>Email: <a class="mono" href="mailto:infoappwide@gmail.com">infoappwide@gmail.com</a></li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn ok" href="mailto:infoappwide@gmail.com?subject=SpyWords%20Feedback">Send Feedback</a>
+          <a class="btn warn" href="mailto:infoappwide@gmail.com?subject=SpyWords%20Bug%20Report&body=What%20happened%3F%0D%0DDevice%3A%20%0DiOS%20Version%3A%20%0DApp%20Version%3A%20">Report a Bug</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <section id="privacy" class="card policy" aria-labelledby="privacy-title">
+      <h2 id="privacy-title">Privacy Policy (SpyWords)</h2>
+      <p class="subtle">Last updated: <time datetime="2025-08-04">August 4, 2025</time></p>
+
+      <p>SpyWords ("we", "our", or "the app") is committed to protecting your privacy. This privacy policy describes how we collect, use, and protect your personal information when you use our mobile application.</p>
+
+      <h3>1. Information We Collect</h3>
+      <ul class="list">
+        <li>We may collect device information, such as a unique device ID (used for gameplay identity).</li>
+        <li>No email address, name, or contact info is collected.</li>
+        <li>Anonymous gameplay activity may be tracked to improve the app.</li>
+      </ul>
+
+      <h3>2. How We Use Your Information</h3>
+      <ul class="list">
+        <li>To enable multiplayer game functionality (device ID as identifier)</li>
+        <li>To improve the overall user experience</li>
+        <li>To prevent misuse or abuse of the system</li>
+      </ul>
+
+      <h3>3. Third-Party Services</h3>
+      <p>SpyWords does not use ads or any third-party analytics tools as of now. We may integrate such services in the future with notice in this policy.</p>
+
+      <h3>4. User Rights</h3>
+      <p>We don’t store any personal data that can identify you. If you have concerns or questions, you may contact: <a class="mono" href="mailto:infoappwide@gmail.com">infoappwide@gmail.com</a></p>
+
+      <h3>5. Data Security</h3>
+      <p>All device identifiers are stored securely via Firebase and never shared with third parties.</p>
+
+      <h3>6. Changes to This Policy</h3>
+      <p>This policy may be updated as needed. All changes will be listed with a new effective date.</p>
+
+      <p>© 2025 SpyWords</p>
+    </section>
+
+    <footer>
+      <div>© 2025 SpyWords • <a href="#privacy">Privacy Policy</a> • <a href="#support">Support</a></div>
+    </footer>
+  </div>
+</body>
+</html>
